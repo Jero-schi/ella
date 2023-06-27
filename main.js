@@ -1,12 +1,28 @@
 const linea = document.querySelector('.linea')
-const imgs = document.querySelectorAll('.img')
 const body =  document.querySelector('body')
+const section =  document.querySelector('section')
 
 document.documentElement.style.setProperty('--size-barrita', `${body.clientHeight}px`)
 
-console.log(body.clientHeight);
-getComputedStyle(document.documentElement)
-    .getPropertyValue('--size-barrita');
+console.log(info);
+
+info.forEach(fecha => {
+    console.log(fecha);
+    section.innerHTML += `
+    <div class="conteiner">
+        <p class="fecha">${fecha.fecha}</p>
+
+        <div class="conteiner-img">
+            <img class="img" src="${fecha.img}" alt="" style="object-position: ${fecha.position}">
+        </div>
+
+        <p class="descripcion">${fecha.info}</p>
+        </div>
+    `
+});
+
+const imgs = document.querySelectorAll('.img')
+
 
 function animarBarrita(entradas) {
     entradas.forEach(entrada => {
@@ -14,7 +30,6 @@ function animarBarrita(entradas) {
             linea.classList.add('animacion')
         }
     });
-    console.log(entradas);
 }
 
 const observador =  new IntersectionObserver(animarBarrita, {
@@ -24,7 +39,3 @@ const observador =  new IntersectionObserver(animarBarrita, {
 })
 
 observador.observe(imgs[0])
-
-// window.addEventListener('scroll', () => {
-//     console.log('hola');
-// })
