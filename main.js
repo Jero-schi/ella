@@ -1,22 +1,30 @@
+const linea = document.querySelector('.linea')
 const imgs = document.querySelectorAll('.img')
-const telon = document.querySelectorAll('.telon')
+const body =  document.querySelector('body')
 
-console.log(imgs);
-console.log(imgs[0].classList);
+document.documentElement.style.setProperty('--size-barrita', `${body.clientHeight}px`)
 
-imgs.forEach((img, index) => {
-    img.addEventListener('mouseenter', () => {
-        telon[index].classList.remove('inactive')
-        telon[index].classList.add('animation')
-    })
-    
-    img.addEventListener('mouseleave', () => {
-        telon[index].classList.add('inactive')
-        telon[index].classList.remove('animation')
-    })
-    
-    img.addEventListener('click', () => {
-        telon[index].classList.toggle('inactive')
-        telon[index].classList.toggle('animation')
-    })
+console.log(body.clientHeight);
+getComputedStyle(document.documentElement)
+    .getPropertyValue('--size-barrita');
+
+function animarBarrita(entradas) {
+    entradas.forEach(entrada => {
+        if (entrada.isIntersecting) {
+            linea.classList.add('animacion')
+        }
+    });
+    console.log(entradas);
+}
+
+const observador =  new IntersectionObserver(animarBarrita, {
+    root: null,
+    rootMargin: '50px',
+    threshold: 0.2
 })
+
+observador.observe(imgs[0])
+
+// window.addEventListener('scroll', () => {
+//     console.log('hola');
+// })
