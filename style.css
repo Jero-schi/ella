@@ -274,3 +274,39 @@ section .conteiner {
 
 
 }
+
+@media (min-width: 1800px) {
+    .linea {
+        left: 11vw;
+    }
+
+    .titulo {
+        font-size: 12em;
+    }
+
+    svg {
+        width: 250px;
+        height: 250px;
+    }
+
+    .barrita {
+        height: 5.5rem;
+    }
+
+    .barrita button, .barrita div p {
+        font-size: 7em;
+    }
+
+    section .conteiner {
+        gap: 52px;
+    }
+
+    .conteiner .fecha, .conteiner .descripcion {
+        font-size: 7.5em;
+    }
+
+    .conteiner-img img {
+        width: 300px;
+        height: 300px;
+    }
+}
