@@ -16,6 +16,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     height: 100%;
     background-color: var(--fondo);
@@ -125,8 +129,12 @@ svg {
     padding: 0px 16px;
     height: 100%;
 
-    color: var(--naranja);
     font-size: 4.5em;
+}
+
+.barrita a {
+    text-decoration: none;
+    color: var(--naranja);
 }
 
 .barrita div p {
@@ -150,6 +158,8 @@ section {
     display: flex;
     flex-direction: column;
     gap: 90px;
+
+    scroll-behavior: smooth;
 }
 
 section .conteiner {
