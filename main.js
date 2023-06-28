@@ -2,25 +2,25 @@ const linea = document.querySelector('.linea')
 const body =  document.querySelector('body')
 const section =  document.querySelector('section')
 
-document.documentElement.style.setProperty('--size-barrita', `${body.clientHeight}px`)
 
 console.log(info);
 
 info.forEach(fecha => {
-    console.log(fecha);
+    // console.log(fecha);
     section.innerHTML += `
     <div class="conteiner">
-        <p class="fecha">${fecha.fecha}</p>
+    <p class="fecha">${fecha.fecha}</p>
 
-        <div class="conteiner-img">
-            <img class="img" src="${fecha.img}" alt="" style="object-position: ${fecha.position}">
-        </div>
-
-        <p class="descripcion">${fecha.info}</p>
-        </div>
+    <div class="conteiner-img">
+    <img class="img" src="${fecha.img}" alt="" style="object-position: ${fecha.position}">
+    </div>
+    
+    <p class="descripcion">${fecha.info}</p>
+    </div>
     `
 });
 
+document.documentElement.style.setProperty('--size-barrita', `${body.clientHeight}px`)
 const imgs = document.querySelectorAll('.img')
 
 

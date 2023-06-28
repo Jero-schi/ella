@@ -51,7 +51,7 @@ main {
 }
 
 .animacion {
-    animation: barrita 3s .2s ease both;
+    animation: barrita 5s .2s ease-in-out both;
 }
 
 @keyframes barrita {
@@ -136,9 +136,9 @@ svg {
 
 
 section {
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    padding: 32px 0;
+    padding: 40px 0 32px 0;
 
     display: flex;
     flex-direction: column;
