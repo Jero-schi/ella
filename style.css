@@ -22,6 +22,10 @@ body {
     padding: 0 24px;
     
     font-size: 4px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center
 }
 
 main {
@@ -67,6 +71,9 @@ main {
     color: var(--blanquito);
     text-align: center;
     font-size: 5em;
+}
+
+.titulo h1 {
     font-weight: 600;
 }
 
@@ -236,4 +243,34 @@ section .conteiner {
     .conteiner .descripcion {
         font-size: 4em;
     }
+}
+
+@media (min-width: 1024px) {
+    body {
+        padding: 0px 48px;
+    }
+
+    .linea {
+        left: 13vw;
+    }
+
+    .barrita {
+        width: 85%;
+    }
+
+    section {
+        width: 85%;
+        gap: 130px;
+    }
+
+    .conteiner .fecha, .conteiner.descripcion {
+        font-size: 5em;
+    }
+
+    .conteiner-img img {
+        width: 200px;
+        height: 200px;
+    }
+
+
 }
