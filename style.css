@@ -100,6 +100,13 @@ main {
 svg {
     width: 115px;
     height: 115px;
+
+    transition: all .5s ease-in-out;
+}
+
+svg:hover {
+    transform: scale(1.2);
+    filter: brightness(120%);
 }
 
 .barrita {
@@ -141,12 +148,20 @@ svg {
     color: var(--naranja);
     font-size: 4.5em;
     font-style: italic;
+    cursor: default;
 }
 
 .barrita div .subrayado {
-    width: 100%;
+    width: 10%;
     height: 2px;
     background-color: var(--naranja);
+
+    transition: width .3s ease;
+}
+
+.barrita div:hover .subrayado {
+    width: 100%;
+
 }
 
 

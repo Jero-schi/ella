@@ -6,7 +6,7 @@ const section =  document.querySelector('section')
 info.forEach((fecha, index) => {
     // console.log(index);
     section.innerHTML += `
-    <div id="conteiner-${index}" class="conteiner">
+    <div class="conteiner">
     <p class="fecha">${fecha.fecha}</p>
 
     <div class="conteiner-img">
