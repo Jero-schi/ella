@@ -2,9 +2,6 @@ const linea = document.querySelector('.linea')
 const body =  document.querySelector('body')
 const section =  document.querySelector('section')
 
-
-console.log(info);
-
 info.forEach(fecha => {
     // console.log(fecha);
     section.innerHTML += `
