@@ -51,7 +51,7 @@ main {
 }
 
 .animacion {
-    animation: barrita 5s .2s ease-in-out both;
+    animation: barrita 7s .2s ease-in-out both;
 }
 
 @keyframes barrita {
@@ -147,7 +147,7 @@ section {
 
 section .conteiner {
     width: 100%;
-    height: 116px;
+    /* height: 116px; */
     
     display: flex;
     align-items: center;
@@ -183,3 +183,57 @@ section .conteiner {
     font-style: italic;
 }
 
+
+@media (min-width: 700px) {
+    body {
+        padding: 0 32px;
+    }
+    .linea {
+        left: 50px;
+    }
+
+    .titulo {
+        font-size: 8em;
+    }
+
+    svg {
+        width: 160px;
+        height: 160px;
+    }
+
+    .barrita {
+        height: 4.2rem;
+    }
+
+    .barrita button {
+        font-size: 5em;
+        padding: 0 32px;
+    }
+
+    .barrita div p {
+        font-size: 5em;
+    }
+
+    section {
+        gap: 100px;
+        padding: 64px 0 32px 0;
+    }
+
+    section .conteiner {
+        gap: 24px;
+    }
+
+    .conteiner .fecha {
+        font-size: 4em;
+        padding: 8px 28px;
+    }
+
+    .conteiner-img img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .conteiner .descripcion {
+        font-size: 4em;
+    }
+}
