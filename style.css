@@ -83,6 +83,7 @@ main {
     color: white;
     z-index: -9;
     font-size: 1em;
+    -webkit-text-stroke: 2px;
 }
 
 svg {
@@ -155,6 +156,7 @@ section .conteiner {
 
 .conteiner .fecha {
     background-color: var(--azulito);
+    box-shadow: 0px 0px 16px var(--azulito);
     padding: 4px 12px;
     border-radius: 10px;
 
@@ -172,6 +174,7 @@ section .conteiner {
     object-position: 0% 20%;
     padding: 8px;
     background-color: var(--azulito);
+    box-shadow: 0px 0px 22px 2px var(--azulito);
 }
 
 .conteiner .descripcion {
